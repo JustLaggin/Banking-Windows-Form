@@ -27,14 +27,14 @@ Public Class NewForm
                 COMMAND = New MySqlCommand(Query, conn)
                 READER = COMMAND.ExecuteReader
                 While READER.Read
-                    Id = READER.GetInt32("id")
+                    id = READER.GetInt32("id")
                 End While
 
                 READER.Close()
 
 
                 conn.Close()
-                UserForm.id = Id
+                UserForm.id = id
                 UserForm.Show()
                 Me.Close()
             Else
@@ -46,5 +46,7 @@ Public Class NewForm
         End Try
     End Sub
 
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
+    End Sub
 End Class
