@@ -1,4 +1,5 @@
 ﻿Imports System.Diagnostics.Eventing
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
 
 Public Class NewForm
@@ -8,6 +9,7 @@ Public Class NewForm
         conn = New MySqlConnection
         conn.ConnectionString = "server=127.0.0.1;userid=root;password='';database=banking_database"
         Dim READER As MySqlDataReader
+        Dim id
         Try
             conn.Open()
             Dim Query As String
@@ -18,9 +20,21 @@ Public Class NewForm
                 READER.Close()
                 Query = "INSERT INTO banking_database.logininfo (id,username,password) Values ((SELECT COALESCE(MAX(id), 0) FROM userinfo),'" & txtbox_username.Text & "' ,'" & txtbox_password.Text & "')"
                 COMMAND = New MySqlCommand(Query, conn)
-                Reader = COMMAND.ExecuteReader
-                conn.Close()
+                READER = COMMAND.ExecuteReader
+                READER.Close()
 
+                Query = "SELECT id FROM banking_database.userinfo where firstname ='" & txtbox_firstname.Text & "'"
+                COMMAND = New MySqlCommand(Query, conn)
+                READER = COMMAND.ExecuteReader
+                While READER.Read
+                    Id = READER.GetInt32("id")
+                End While
+
+                READER.Close()
+
+
+                conn.Close()
+                UserForm.id = Id
                 UserForm.Show()
                 Me.Close()
             Else

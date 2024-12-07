@@ -22,28 +22,29 @@ Partial Class UserForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Button1 = New Button()
-        Button2 = New Button()
+        btn_withdraw = New Button()
+        btn_deposit = New Button()
         Button3 = New Button()
+        tempbox1 = New TextBox()
         SuspendLayout()
         ' 
-        ' Button1
+        ' btn_withdraw
         ' 
-        Button1.Location = New Point(136, 191)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 0
-        Button1.Text = "Withdraw"
-        Button1.UseVisualStyleBackColor = True
+        btn_withdraw.Location = New Point(136, 191)
+        btn_withdraw.Name = "btn_withdraw"
+        btn_withdraw.Size = New Size(75, 23)
+        btn_withdraw.TabIndex = 0
+        btn_withdraw.Text = "Withdraw"
+        btn_withdraw.UseVisualStyleBackColor = True
         ' 
-        ' Button2
+        ' btn_deposit
         ' 
-        Button2.Location = New Point(243, 191)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(75, 23)
-        Button2.TabIndex = 1
-        Button2.Text = "Deposit"
-        Button2.UseVisualStyleBackColor = True
+        btn_deposit.Location = New Point(243, 191)
+        btn_deposit.Name = "btn_deposit"
+        btn_deposit.Size = New Size(75, 23)
+        btn_deposit.TabIndex = 1
+        btn_deposit.Text = "Deposit"
+        btn_deposit.UseVisualStyleBackColor = True
         ' 
         ' Button3
         ' 
@@ -54,20 +55,30 @@ Partial Class UserForm
         Button3.Text = "loan"
         Button3.UseVisualStyleBackColor = True
         ' 
+        ' tempbox1
+        ' 
+        tempbox1.Location = New Point(136, 162)
+        tempbox1.Name = "tempbox1"
+        tempbox1.Size = New Size(284, 23)
+        tempbox1.TabIndex = 3
+        ' 
         ' UserForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(tempbox1)
         Controls.Add(Button3)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
+        Controls.Add(btn_deposit)
+        Controls.Add(btn_withdraw)
         Name = "UserForm"
         Text = "Banking APP"
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btn_withdraw As Button
+    Friend WithEvents btn_deposit As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents tempbox1 As TextBox
 End Class
