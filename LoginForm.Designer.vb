@@ -23,7 +23,7 @@ Partial Class form_login
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         txtbox_username = New TextBox()
-        txtbbox_password = New TextBox()
+        txtbox_password = New TextBox()
         btn_login = New Button()
         Button1 = New Button()
         SuspendLayout()
@@ -36,13 +36,14 @@ Partial Class form_login
         txtbox_username.Size = New Size(100, 23)
         txtbox_username.TabIndex = 0
         ' 
-        ' txtbbox_password
+        ' txtbox_password
         ' 
-        txtbbox_password.Location = New Point(226, 159)
-        txtbbox_password.Name = "txtbbox_password"
-        txtbbox_password.PlaceholderText = "Password"
-        txtbbox_password.Size = New Size(100, 23)
-        txtbbox_password.TabIndex = 1
+        txtbox_password.Location = New Point(226, 159)
+        txtbox_password.Name = "txtbox_password"
+        txtbox_password.PlaceholderText = "Password"
+        txtbox_password.Size = New Size(100, 23)
+        txtbox_password.TabIndex = 1
+        txtbox_password.UseSystemPasswordChar = True
         ' 
         ' btn_login
         ' 
@@ -69,7 +70,7 @@ Partial Class form_login
         ClientSize = New Size(800, 450)
         Controls.Add(Button1)
         Controls.Add(btn_login)
-        Controls.Add(txtbbox_password)
+        Controls.Add(txtbox_password)
         Controls.Add(txtbox_username)
         Name = "form_login"
         Text = "BANKING APP"
@@ -78,7 +79,7 @@ Partial Class form_login
     End Sub
 
     Friend WithEvents txtbox_username As TextBox
-    Friend WithEvents txtbbox_password As TextBox
+    Friend WithEvents txtbox_password As TextBox
     Friend WithEvents btn_login As Button
     Friend WithEvents Button1 As Button
 
