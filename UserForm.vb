@@ -11,7 +11,7 @@ Public Class UserForm
         Dim READER As MySqlDataReader
         Dim newbalance
         Try
-            conn.Open()
+            conn.Open
             Dim Query As String
             Query = "SELECT * FROM banking_database.userinfo"
             COMMAND = New MySqlCommand(Query, conn)
@@ -22,22 +22,22 @@ Public Class UserForm
                 newbalance = balance - tempbox1.Text
             End While
 
-            conn.Close()
+            conn.Close
         Catch ex As Exception
             MsgBox(ex.Message)
-            conn.Close()
+            conn.Close
         End Try
         Try
-            conn.Open()
+            conn.Open
             Dim Query As String
             Query = "Update banking_database.userinfo SET balance='" & newbalance & "' where id='" & id & "'"
             COMMAND = New MySqlCommand(Query, conn)
             READER = COMMAND.ExecuteReader
             MessageBox.Show("Data updated")
-            conn.Close()
+            conn.Close
         Catch ex As Exception
             MsgBox(ex.Message)
-            conn.Close()
+            conn.Close
         End Try
     End Sub
 
@@ -75,5 +75,9 @@ Public Class UserForm
             MsgBox(ex.Message)
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_rewards.Click
+
     End Sub
 End Class

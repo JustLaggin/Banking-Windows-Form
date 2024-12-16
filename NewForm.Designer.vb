@@ -41,7 +41,7 @@ Partial Class NewForm
         ' 
         ' btn_create
         ' 
-        btn_create.Location = New Point(164, 780)
+        btn_create.Location = New Point(170, 796)
         btn_create.Margin = New Padding(4, 5, 4, 5)
         btn_create.Name = "btn_create"
         btn_create.Size = New Size(212, 38)
@@ -116,7 +116,7 @@ Partial Class NewForm
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Times New Roman", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ButtonHighlight
         Label1.Location = New Point(31, 120)
         Label1.Name = "Label1"
@@ -129,7 +129,7 @@ Partial Class NewForm
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
-        Label2.Font = New Font("Times New Roman", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label2.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonHighlight
         Label2.Location = New Point(278, 120)
         Label2.Name = "Label2"
@@ -142,7 +142,7 @@ Partial Class NewForm
         ' 
         Label3.AutoSize = True
         Label3.BackColor = Color.Transparent
-        Label3.Font = New Font("Times New Roman", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = SystemColors.ButtonHighlight
         Label3.Location = New Point(31, 247)
         Label3.Name = "Label3"
@@ -155,7 +155,7 @@ Partial Class NewForm
         ' 
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
-        Label4.Font = New Font("Times New Roman", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = SystemColors.ButtonHighlight
         Label4.Location = New Point(31, 331)
         Label4.Name = "Label4"
@@ -168,7 +168,7 @@ Partial Class NewForm
         ' 
         Label5.AutoSize = True
         Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Times New Roman", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = SystemColors.ButtonHighlight
         Label5.Location = New Point(31, 424)
         Label5.Name = "Label5"
@@ -181,7 +181,7 @@ Partial Class NewForm
         ' 
         Label6.AutoSize = True
         Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Times New Roman", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = SystemColors.ButtonHighlight
         Label6.Location = New Point(31, 516)
         Label6.Name = "Label6"
@@ -194,7 +194,7 @@ Partial Class NewForm
         ' 
         Label7.AutoSize = True
         Label7.BackColor = Color.Transparent
-        Label7.Font = New Font("Times New Roman", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = SystemColors.ButtonHighlight
         Label7.Location = New Point(31, 584)
         Label7.Name = "Label7"
@@ -205,7 +205,7 @@ Partial Class NewForm
         ' 
         ' NewForm
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 25.0F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.Black_Aesthetic_Motivational_Quote_Your_Story__5_
         ClientSize = New Size(544, 960)
