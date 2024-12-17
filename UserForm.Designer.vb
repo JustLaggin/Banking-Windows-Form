@@ -33,7 +33,7 @@ Partial Class UserForm
         btn_invest = New Button()
         btn_transfer = New Button()
         btn_bills = New Button()
-        Label2 = New Label()
+        Lbl_AvailBal = New Label()
         SuspendLayout()
         ' 
         ' btn_withdraw
@@ -41,10 +41,9 @@ Partial Class UserForm
         btn_withdraw.BackColor = Color.Black
         btn_withdraw.BackgroundImageLayout = ImageLayout.None
         btn_withdraw.ForeColor = SystemColors.ButtonFace
-        btn_withdraw.Location = New Point(32, 335)
-        btn_withdraw.Margin = New Padding(4, 5, 4, 5)
+        btn_withdraw.Location = New Point(22, 201)
         btn_withdraw.Name = "btn_withdraw"
-        btn_withdraw.Size = New Size(107, 38)
+        btn_withdraw.Size = New Size(75, 23)
         btn_withdraw.TabIndex = 0
         btn_withdraw.Text = "Withdraw"
         btn_withdraw.UseVisualStyleBackColor = False
@@ -53,10 +52,9 @@ Partial Class UserForm
         ' 
         btn_deposit.BackColor = SystemColors.ActiveCaptionText
         btn_deposit.ForeColor = SystemColors.ButtonFace
-        btn_deposit.Location = New Point(189, 335)
-        btn_deposit.Margin = New Padding(4, 5, 4, 5)
+        btn_deposit.Location = New Point(132, 201)
         btn_deposit.Name = "btn_deposit"
-        btn_deposit.Size = New Size(107, 38)
+        btn_deposit.Size = New Size(75, 23)
         btn_deposit.TabIndex = 1
         btn_deposit.Text = "Deposit"
         btn_deposit.UseVisualStyleBackColor = False
@@ -65,20 +63,18 @@ Partial Class UserForm
         ' 
         btn_Loan.BackColor = SystemColors.ActiveCaptionText
         btn_Loan.ForeColor = SystemColors.ButtonFace
-        btn_Loan.Location = New Point(351, 335)
-        btn_Loan.Margin = New Padding(4, 5, 4, 5)
+        btn_Loan.Location = New Point(246, 201)
         btn_Loan.Name = "btn_Loan"
-        btn_Loan.Size = New Size(107, 38)
+        btn_Loan.Size = New Size(75, 23)
         btn_Loan.TabIndex = 2
         btn_Loan.Text = "Loan"
         btn_Loan.UseVisualStyleBackColor = False
         ' 
         ' tempbox1
         ' 
-        tempbox1.Location = New Point(32, 229)
-        tempbox1.Margin = New Padding(4, 5, 4, 5)
+        tempbox1.Location = New Point(22, 137)
         tempbox1.Name = "tempbox1"
-        tempbox1.Size = New Size(426, 31)
+        tempbox1.Size = New Size(299, 23)
         tempbox1.TabIndex = 3
         ' 
         ' Label1
@@ -87,9 +83,10 @@ Partial Class UserForm
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ButtonFace
-        Label1.Location = New Point(32, 146)
+        Label1.Location = New Point(22, 88)
+        Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(229, 32)
+        Label1.Size = New Size(156, 22)
         Label1.TabIndex = 4
         Label1.Text = "Available Balance"
         ' 
@@ -97,10 +94,9 @@ Partial Class UserForm
         ' 
         btn_rewards.BackColor = SystemColors.ActiveCaptionText
         btn_rewards.ForeColor = SystemColors.ButtonFace
-        btn_rewards.Location = New Point(32, 499)
-        btn_rewards.Margin = New Padding(4, 5, 4, 5)
+        btn_rewards.Location = New Point(22, 299)
         btn_rewards.Name = "btn_rewards"
-        btn_rewards.Size = New Size(107, 38)
+        btn_rewards.Size = New Size(75, 23)
         btn_rewards.TabIndex = 5
         btn_rewards.Text = "Rewards"
         btn_rewards.UseVisualStyleBackColor = False
@@ -109,10 +105,9 @@ Partial Class UserForm
         ' 
         btn_credit.BackColor = SystemColors.ActiveCaptionText
         btn_credit.ForeColor = SystemColors.ButtonFace
-        btn_credit.Location = New Point(189, 499)
-        btn_credit.Margin = New Padding(4, 5, 4, 5)
+        btn_credit.Location = New Point(132, 299)
         btn_credit.Name = "btn_credit"
-        btn_credit.Size = New Size(107, 38)
+        btn_credit.Size = New Size(75, 23)
         btn_credit.TabIndex = 6
         btn_credit.Text = "Credit"
         btn_credit.UseVisualStyleBackColor = False
@@ -121,10 +116,9 @@ Partial Class UserForm
         ' 
         btn_savings.BackColor = SystemColors.ActiveCaptionText
         btn_savings.ForeColor = SystemColors.ButtonFace
-        btn_savings.Location = New Point(351, 499)
-        btn_savings.Margin = New Padding(4, 5, 4, 5)
+        btn_savings.Location = New Point(246, 299)
         btn_savings.Name = "btn_savings"
-        btn_savings.Size = New Size(107, 38)
+        btn_savings.Size = New Size(75, 23)
         btn_savings.TabIndex = 7
         btn_savings.Text = "Savings"
         btn_savings.UseVisualStyleBackColor = False
@@ -133,10 +127,9 @@ Partial Class UserForm
         ' 
         btn_invest.BackColor = SystemColors.ActiveCaptionText
         btn_invest.ForeColor = SystemColors.ButtonFace
-        btn_invest.Location = New Point(32, 653)
-        btn_invest.Margin = New Padding(4, 5, 4, 5)
+        btn_invest.Location = New Point(22, 392)
         btn_invest.Name = "btn_invest"
-        btn_invest.Size = New Size(107, 38)
+        btn_invest.Size = New Size(75, 23)
         btn_invest.TabIndex = 8
         btn_invest.Text = "Invest"
         btn_invest.UseVisualStyleBackColor = False
@@ -145,10 +138,9 @@ Partial Class UserForm
         ' 
         btn_transfer.BackColor = SystemColors.ActiveCaptionText
         btn_transfer.ForeColor = SystemColors.ButtonFace
-        btn_transfer.Location = New Point(189, 653)
-        btn_transfer.Margin = New Padding(4, 5, 4, 5)
+        btn_transfer.Location = New Point(132, 392)
         btn_transfer.Name = "btn_transfer"
-        btn_transfer.Size = New Size(107, 38)
+        btn_transfer.Size = New Size(75, 23)
         btn_transfer.TabIndex = 9
         btn_transfer.Text = "Transfer"
         btn_transfer.UseVisualStyleBackColor = False
@@ -157,30 +149,30 @@ Partial Class UserForm
         ' 
         btn_bills.BackColor = SystemColors.ActiveCaptionText
         btn_bills.ForeColor = SystemColors.ButtonFace
-        btn_bills.Location = New Point(351, 653)
-        btn_bills.Margin = New Padding(4, 5, 4, 5)
+        btn_bills.Location = New Point(246, 392)
         btn_bills.Name = "btn_bills"
-        btn_bills.Size = New Size(107, 38)
+        btn_bills.Size = New Size(75, 23)
         btn_bills.TabIndex = 10
         btn_bills.Text = "Bills"
         btn_bills.UseVisualStyleBackColor = False
         ' 
-        ' Label2
+        ' Lbl_AvailBal
         ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(32, 190)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(63, 25)
-        Label2.TabIndex = 11
-        Label2.Text = "Label2"
+        Lbl_AvailBal.AutoSize = True
+        Lbl_AvailBal.Location = New Point(22, 114)
+        Lbl_AvailBal.Margin = New Padding(2, 0, 2, 0)
+        Lbl_AvailBal.Name = "Lbl_AvailBal"
+        Lbl_AvailBal.Size = New Size(41, 15)
+        Lbl_AvailBal.TabIndex = 11
+        Lbl_AvailBal.Text = "Label2"
         ' 
         ' UserForm
         ' 
-        AutoScaleDimensions = New SizeF(10F, 25F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.Black_Aesthetic_Motivational_Quote_Your_Story__4_
-        ClientSize = New Size(548, 962)
-        Controls.Add(Label2)
+        ClientSize = New Size(384, 577)
+        Controls.Add(Lbl_AvailBal)
         Controls.Add(btn_bills)
         Controls.Add(btn_transfer)
         Controls.Add(btn_invest)
@@ -192,7 +184,6 @@ Partial Class UserForm
         Controls.Add(btn_Loan)
         Controls.Add(btn_deposit)
         Controls.Add(btn_withdraw)
-        Margin = New Padding(4, 5, 4, 5)
         Name = "UserForm"
         Text = "Banking APP"
         ResumeLayout(False)
@@ -210,5 +201,5 @@ Partial Class UserForm
     Friend WithEvents btn_invest As Button
     Friend WithEvents btn_transfer As Button
     Friend WithEvents btn_bills As Button
-    Friend WithEvents Label2 As Label
+    Friend WithEvents Lbl_AvailBal As Label
 End Class

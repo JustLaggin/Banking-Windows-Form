@@ -8,9 +8,19 @@ Public Class form_login
         conn = New MySqlConnection
         conn.ConnectionString = "server=127.0.0.1;userid=root;password='';database=banking_database"
         Dim READER As MySqlDataReader
+        Dim Id
         Try
             conn.Open()
             Dim Query As String
+            Query = "SELECT id FROM banking_database.logininfo where username ='" & txtbox_username.Text & "'"
+            COMMAND = New MySqlCommand(Query, conn)
+            READER = COMMAND.ExecuteReader
+            While READER.Read
+                Id = READER.GetInt32("id")
+            End While
+            UserForm.id = Id
+            READER.Close()
+
             Query = "SELECT * FROM logininfo WHERE username = '" & txtbox_username.Text & "' AND password = '" & txtbox_password.Text & "'"
             COMMAND = New MySqlCommand(Query, conn)
             READER = COMMAND.ExecuteReader
@@ -28,14 +38,20 @@ Public Class form_login
                 MessageBox.Show("Username and password are incorrect!")
             End If
 
+            READER.Close()
+
+
+
+
             conn.Close()
+
         Catch ex As Exception
             MsgBox(ex.Message)
             conn.Close()
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btn_NewAccClick(sender As Object, e As EventArgs) Handles btn_NewAcc.Click
         NewForm.Show()
         Me.Close()
     End Sub
@@ -49,7 +65,4 @@ Public Class form_login
 
     End Sub
 
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
 End Class
