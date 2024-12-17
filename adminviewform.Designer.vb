@@ -22,9 +22,53 @@ Partial Class adminviewform
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "adminviewform"
+        dgv_customers = New DataGridView()
+        btn_delete = New Button()
+        txtbox_iddelete = New TextBox()
+        CType(dgv_customers, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' dgv_customers
+        ' 
+        dgv_customers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgv_customers.Location = New Point(82, 56)
+        dgv_customers.Name = "dgv_customers"
+        dgv_customers.Size = New Size(461, 269)
+        dgv_customers.TabIndex = 0
+        ' 
+        ' btn_delete
+        ' 
+        btn_delete.Location = New Point(82, 331)
+        btn_delete.Name = "btn_delete"
+        btn_delete.Size = New Size(75, 23)
+        btn_delete.TabIndex = 1
+        btn_delete.Text = "Delete"
+        btn_delete.UseVisualStyleBackColor = True
+        ' 
+        ' txtbox_iddelete
+        ' 
+        txtbox_iddelete.Location = New Point(163, 332)
+        txtbox_iddelete.Name = "txtbox_iddelete"
+        txtbox_iddelete.PlaceholderText = "Input Id Here"
+        txtbox_iddelete.Size = New Size(380, 23)
+        txtbox_iddelete.TabIndex = 2
+        ' 
+        ' adminviewform
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 450)
+        Controls.Add(txtbox_iddelete)
+        Controls.Add(btn_delete)
+        Controls.Add(dgv_customers)
+        Name = "adminviewform"
+        Text = "adminviewform"
+        CType(dgv_customers, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
+
+    Friend WithEvents dgv_customers As DataGridView
+    Friend WithEvents btn_delete As Button
+    Friend WithEvents txtbox_iddelete As TextBox
 End Class

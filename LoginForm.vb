@@ -30,8 +30,14 @@ Public Class form_login
                 count = count + 1
             End While
             If count = 1 Then
-                UserForm.Show()
-                Me.Close()
+                If txtbox_username.Text = "admin" Then
+                    adminviewform.Show()
+                    Me.Close()
+                Else
+                    UserForm.Show()
+                    Me.Close()
+                End If
+
             ElseIf count > 1 Then
                 MessageBox.Show("Username and password are duplicate!")
             Else

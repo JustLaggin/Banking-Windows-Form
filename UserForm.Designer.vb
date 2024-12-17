@@ -25,7 +25,6 @@ Partial Class UserForm
         btn_withdraw = New Button()
         btn_deposit = New Button()
         btn_Loan = New Button()
-        tempbox1 = New TextBox()
         Label1 = New Label()
         btn_rewards = New Button()
         btn_credit = New Button()
@@ -63,19 +62,12 @@ Partial Class UserForm
         ' 
         btn_Loan.BackColor = SystemColors.ActiveCaptionText
         btn_Loan.ForeColor = SystemColors.ButtonFace
-        btn_Loan.Location = New Point(246, 201)
+        btn_Loan.Location = New Point(132, 392)
         btn_Loan.Name = "btn_Loan"
         btn_Loan.Size = New Size(75, 23)
         btn_Loan.TabIndex = 2
         btn_Loan.Text = "Loan"
         btn_Loan.UseVisualStyleBackColor = False
-        ' 
-        ' tempbox1
-        ' 
-        tempbox1.Location = New Point(22, 137)
-        tempbox1.Name = "tempbox1"
-        tempbox1.Size = New Size(299, 23)
-        tempbox1.TabIndex = 3
         ' 
         ' Label1
         ' 
@@ -138,7 +130,7 @@ Partial Class UserForm
         ' 
         btn_transfer.BackColor = SystemColors.ActiveCaptionText
         btn_transfer.ForeColor = SystemColors.ButtonFace
-        btn_transfer.Location = New Point(132, 392)
+        btn_transfer.Location = New Point(246, 201)
         btn_transfer.Name = "btn_transfer"
         btn_transfer.Size = New Size(75, 23)
         btn_transfer.TabIndex = 9
@@ -180,7 +172,6 @@ Partial Class UserForm
         Controls.Add(btn_credit)
         Controls.Add(btn_rewards)
         Controls.Add(Label1)
-        Controls.Add(tempbox1)
         Controls.Add(btn_Loan)
         Controls.Add(btn_deposit)
         Controls.Add(btn_withdraw)
@@ -193,7 +184,6 @@ Partial Class UserForm
     Friend WithEvents btn_withdraw As Button
     Friend WithEvents btn_deposit As Button
     Friend WithEvents btn_Loan As Button
-    Friend WithEvents tempbox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_rewards As Button
     Friend WithEvents btn_credit As Button
