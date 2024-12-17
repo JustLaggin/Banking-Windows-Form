@@ -196,5 +196,6 @@ Public Class UserForm
         If History.Visible = False Then
             History.Show()
         End If
+
     End Sub
 End Class
