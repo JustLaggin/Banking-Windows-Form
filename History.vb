@@ -15,7 +15,7 @@ Public Class History
         Try
             conn.Open()
             Dim Query As String
-            Query = "SELECT id,amount,action,receiver,time FROM banking_database.historyinfo"
+            Query = "SELECT id as 'Id',amount as 'Amount',action as 'Action',receiver as 'Receiver Id',time as 'Transaction Time' FROM banking_database.historyinfo where id= '" & UserForm.id & "'"
             COMMAND = New MySqlCommand(Query, conn)
             SDA.SelectCommand = COMMAND
             SDA.Fill(dbdataset)
