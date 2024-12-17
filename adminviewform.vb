@@ -4,10 +4,6 @@ Public Class adminviewform
     Dim conn As MySqlConnection
     Dim COMMAND As MySqlCommand
     Dim dbdataset As New DataTable
-    Private Sub reloadform()
-
-
-    End Sub
     Private Sub dgv_customers_CellContentClick(ByVal sender As Object, ByVal e As DataGridViewCellEventArgs) Handles dgv_customers.CellContentClick
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow

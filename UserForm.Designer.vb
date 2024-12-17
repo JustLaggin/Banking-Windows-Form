@@ -28,7 +28,7 @@ Partial Class UserForm
         Label1 = New Label()
         btn_rewards = New Button()
         btn_credit = New Button()
-        btn_savings = New Button()
+        btn_history = New Button()
         btn_invest = New Button()
         btn_transfer = New Button()
         btn_bills = New Button()
@@ -86,7 +86,7 @@ Partial Class UserForm
         ' 
         btn_rewards.BackColor = SystemColors.ActiveCaptionText
         btn_rewards.ForeColor = SystemColors.ButtonFace
-        btn_rewards.Location = New Point(22, 299)
+        btn_rewards.Location = New Point(246, 299)
         btn_rewards.Name = "btn_rewards"
         btn_rewards.Size = New Size(75, 23)
         btn_rewards.TabIndex = 5
@@ -104,16 +104,16 @@ Partial Class UserForm
         btn_credit.Text = "Credit"
         btn_credit.UseVisualStyleBackColor = False
         ' 
-        ' btn_savings
+        ' btn_history
         ' 
-        btn_savings.BackColor = SystemColors.ActiveCaptionText
-        btn_savings.ForeColor = SystemColors.ButtonFace
-        btn_savings.Location = New Point(246, 299)
-        btn_savings.Name = "btn_savings"
-        btn_savings.Size = New Size(75, 23)
-        btn_savings.TabIndex = 7
-        btn_savings.Text = "Savings"
-        btn_savings.UseVisualStyleBackColor = False
+        btn_history.BackColor = SystemColors.ActiveCaptionText
+        btn_history.ForeColor = SystemColors.ButtonFace
+        btn_history.Location = New Point(22, 299)
+        btn_history.Name = "btn_history"
+        btn_history.Size = New Size(75, 23)
+        btn_history.TabIndex = 7
+        btn_history.Text = "History"
+        btn_history.UseVisualStyleBackColor = False
         ' 
         ' btn_invest
         ' 
@@ -168,7 +168,7 @@ Partial Class UserForm
         Controls.Add(btn_bills)
         Controls.Add(btn_transfer)
         Controls.Add(btn_invest)
-        Controls.Add(btn_savings)
+        Controls.Add(btn_history)
         Controls.Add(btn_credit)
         Controls.Add(btn_rewards)
         Controls.Add(Label1)
@@ -187,7 +187,7 @@ Partial Class UserForm
     Friend WithEvents Label1 As Label
     Friend WithEvents btn_rewards As Button
     Friend WithEvents btn_credit As Button
-    Friend WithEvents btn_savings As Button
+    Friend WithEvents btn_history As Button
     Friend WithEvents btn_invest As Button
     Friend WithEvents btn_transfer As Button
     Friend WithEvents btn_bills As Button
