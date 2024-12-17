@@ -26,13 +26,11 @@ Partial Class UserForm
         btn_deposit = New Button()
         btn_Loan = New Button()
         Label1 = New Label()
-        btn_rewards = New Button()
-        btn_credit = New Button()
         btn_history = New Button()
-        btn_invest = New Button()
         btn_transfer = New Button()
         btn_bills = New Button()
         Lbl_AvailBal = New Label()
+        btn_logout = New Button()
         SuspendLayout()
         ' 
         ' btn_withdraw
@@ -62,7 +60,7 @@ Partial Class UserForm
         ' 
         btn_Loan.BackColor = SystemColors.ActiveCaptionText
         btn_Loan.ForeColor = SystemColors.ButtonFace
-        btn_Loan.Location = New Point(132, 392)
+        btn_Loan.Location = New Point(246, 392)
         btn_Loan.Name = "btn_Loan"
         btn_Loan.Size = New Size(75, 23)
         btn_Loan.TabIndex = 2
@@ -73,7 +71,7 @@ Partial Class UserForm
         ' 
         Label1.AutoSize = True
         Label1.BackColor = Color.Transparent
-        Label1.Font = New Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0)
         Label1.ForeColor = SystemColors.ButtonFace
         Label1.Location = New Point(22, 88)
         Label1.Margin = New Padding(2, 0, 2, 0)
@@ -82,49 +80,16 @@ Partial Class UserForm
         Label1.TabIndex = 4
         Label1.Text = "Available Balance"
         ' 
-        ' btn_rewards
-        ' 
-        btn_rewards.BackColor = SystemColors.ActiveCaptionText
-        btn_rewards.ForeColor = SystemColors.ButtonFace
-        btn_rewards.Location = New Point(246, 299)
-        btn_rewards.Name = "btn_rewards"
-        btn_rewards.Size = New Size(75, 23)
-        btn_rewards.TabIndex = 5
-        btn_rewards.Text = "Rewards"
-        btn_rewards.UseVisualStyleBackColor = False
-        ' 
-        ' btn_credit
-        ' 
-        btn_credit.BackColor = SystemColors.ActiveCaptionText
-        btn_credit.ForeColor = SystemColors.ButtonFace
-        btn_credit.Location = New Point(132, 299)
-        btn_credit.Name = "btn_credit"
-        btn_credit.Size = New Size(75, 23)
-        btn_credit.TabIndex = 6
-        btn_credit.Text = "Credit"
-        btn_credit.UseVisualStyleBackColor = False
-        ' 
         ' btn_history
         ' 
         btn_history.BackColor = SystemColors.ActiveCaptionText
         btn_history.ForeColor = SystemColors.ButtonFace
-        btn_history.Location = New Point(22, 299)
+        btn_history.Location = New Point(132, 292)
         btn_history.Name = "btn_history"
         btn_history.Size = New Size(75, 23)
         btn_history.TabIndex = 7
         btn_history.Text = "History"
         btn_history.UseVisualStyleBackColor = False
-        ' 
-        ' btn_invest
-        ' 
-        btn_invest.BackColor = SystemColors.ActiveCaptionText
-        btn_invest.ForeColor = SystemColors.ButtonFace
-        btn_invest.Location = New Point(22, 392)
-        btn_invest.Name = "btn_invest"
-        btn_invest.Size = New Size(75, 23)
-        btn_invest.TabIndex = 8
-        btn_invest.Text = "Invest"
-        btn_invest.UseVisualStyleBackColor = False
         ' 
         ' btn_transfer
         ' 
@@ -141,7 +106,7 @@ Partial Class UserForm
         ' 
         btn_bills.BackColor = SystemColors.ActiveCaptionText
         btn_bills.ForeColor = SystemColors.ButtonFace
-        btn_bills.Location = New Point(246, 392)
+        btn_bills.Location = New Point(123, 392)
         btn_bills.Name = "btn_bills"
         btn_bills.Size = New Size(75, 23)
         btn_bills.TabIndex = 10
@@ -158,19 +123,28 @@ Partial Class UserForm
         Lbl_AvailBal.TabIndex = 11
         Lbl_AvailBal.Text = "Label2"
         ' 
+        ' btn_logout
+        ' 
+        btn_logout.BackColor = SystemColors.ActiveCaptionText
+        btn_logout.ForeColor = SystemColors.ButtonFace
+        btn_logout.Location = New Point(12, 24)
+        btn_logout.Name = "btn_logout"
+        btn_logout.Size = New Size(75, 23)
+        btn_logout.TabIndex = 12
+        btn_logout.Text = "Logout"
+        btn_logout.UseVisualStyleBackColor = False
+        ' 
         ' UserForm
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.Black_Aesthetic_Motivational_Quote_Your_Story__4_
         ClientSize = New Size(384, 577)
+        Controls.Add(btn_logout)
         Controls.Add(Lbl_AvailBal)
         Controls.Add(btn_bills)
         Controls.Add(btn_transfer)
-        Controls.Add(btn_invest)
         Controls.Add(btn_history)
-        Controls.Add(btn_credit)
-        Controls.Add(btn_rewards)
         Controls.Add(Label1)
         Controls.Add(btn_Loan)
         Controls.Add(btn_deposit)
@@ -192,4 +166,5 @@ Partial Class UserForm
     Friend WithEvents btn_transfer As Button
     Friend WithEvents btn_bills As Button
     Friend WithEvents Lbl_AvailBal As Label
+    Friend WithEvents btn_logout As Button
 End Class
