@@ -31,7 +31,7 @@ Public Class UserForm
     End Sub
     Private Sub btn_withdraw_Click(sender As Object, e As EventArgs) Handles btn_withdraw.Click
         Dim change = InputBox("Please enter Amount:", "Withdraw", "")
-        If change IsNot "" And IsNumeric(change) Then
+        If IsNumeric(change) Then
             conn = New MySqlConnection
             conn.ConnectionString = "server=127.0.0.1;userid=root;password='';database=banking_database"
             Dim READER As MySqlDataReader
@@ -76,15 +76,15 @@ Public Class UserForm
                 MsgBox(ex.Message)
                 conn.Close()
             End Try
-        Else
-            MsgBox("Incorrect Info, Try Again")
+        ElseIf Not change = "" Then
+            MsgBox("Incorrect Info, Please Try Again")
         End If
         Me.reloadform()
     End Sub
 
     Private Sub btn_deposit_Click(sender As Object, e As EventArgs) Handles btn_deposit.Click
         Dim change = InputBox("Please enter Amount:", "Deposit", "")
-        If change IsNot "" And IsNumeric(change) Then
+        If IsNumeric(change) Then
             conn = New MySqlConnection
             conn.ConnectionString = "server=127.0.0.1;userid=root;password='';database=banking_database"
             Dim READER As MySqlDataReader
@@ -129,8 +129,9 @@ Public Class UserForm
                 MsgBox(ex.Message)
                 conn.Close()
             End Try
-        Else
-            MsgBox("Incorrect Info, Try Again")
+        ElseIf Not change = "" Then
+            MsgBox("Incorrect Info, Please Try Again")
+
         End If
         Me.reloadform()
     End Sub
@@ -146,7 +147,7 @@ Public Class UserForm
         Dim balance
         Dim checkid = InputBox("Please enter Id:", "Select Reciever", "")
         Dim change
-        If checkid IsNot "" And IsNumeric(checkid) Then
+        If IsNumeric(checkid) Then
             Try
                 conn.Open()
                 Dim Query As String
@@ -155,45 +156,47 @@ Public Class UserForm
                 READER = COMMAND.ExecuteReader
                 While READER.Read
                     change = InputBox("Please enter amount:", "Select Amount", "")
-                    If change = "" Then change = 0
-                    mybalance -= change
-                    READER.Close()
-                    Query = "Update banking_database.userinfo SET balance='" & mybalance & "' where id='" & id & "'"
-                    COMMAND = New MySqlCommand(Query, conn)
-                    READER = COMMAND.ExecuteReader
-                    READER.Close()
+                    If IsNumeric(change) Then
+                        mybalance -= change
+                        READER.Close()
+                        Query = "Update banking_database.userinfo SET balance='" & mybalance & "' where id='" & id & "'"
+                        COMMAND = New MySqlCommand(Query, conn)
+                        READER = COMMAND.ExecuteReader
+                        READER.Close()
 
-                    Query = "SELECT balance FROM banking_database.userinfo where id='" & checkid & "'"
-                    COMMAND = New MySqlCommand(Query, conn)
-                    READER = COMMAND.ExecuteReader
-                    While READER.Read
-                        balance = READER.GetInt32("balance")
-                        balance += change
-                    End While
-                    READER.Close()
-                    Query = "Update banking_database.userinfo SET balance='" & balance & "' where id='" & checkid & "'"
-                    COMMAND = New MySqlCommand(Query, conn)
-                    READER = COMMAND.ExecuteReader
+                        Query = "SELECT balance FROM banking_database.userinfo where id='" & checkid & "'"
+                        COMMAND = New MySqlCommand(Query, conn)
+                        READER = COMMAND.ExecuteReader
+                        While READER.Read
+                            balance = READER.GetInt32("balance")
+                            balance += change
+                        End While
+                        READER.Close()
+                        Query = "Update banking_database.userinfo SET balance='" & balance & "' where id='" & checkid & "'"
+                        COMMAND = New MySqlCommand(Query, conn)
+                        READER = COMMAND.ExecuteReader
+                        Try
+                            conn.Open()
+                            Dim Timestamp As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                            Query = "insert into banking_database.historyinfo (id,amount,action,receiver,time) Values (" & id & " , " & change & ", 'Withdraw' ," & checkid & " ,'" & Timestamp & "')"
+                            COMMAND = New MySqlCommand(Query, conn)
+                            READER = COMMAND.ExecuteReader
+                            conn.Close()
+                        Catch ex As Exception
+                            MsgBox(ex.Message)
+                            conn.Close()
+                        End Try
+                    ElseIf Not change = "" Then
+                        MsgBox("Incorrect Info, Please Try Again")
+                    End If
                 End While
                 conn.Close()
             Catch ex As Exception
                 MsgBox(ex.Message)
                 conn.Close()
             End Try
-            Try
-                conn.Open()
-                Dim Query As String
-                Dim Timestamp As String = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
-                Query = "insert into banking_database.historyinfo (id,amount,action,receiver,time) Values (" & id & " , " & change & ", 'Withdraw' ," & checkid & " ,'" & Timestamp & "')"
-                COMMAND = New MySqlCommand(Query, conn)
-                READER = COMMAND.ExecuteReader
-                conn.Close()
-            Catch ex As Exception
-                MsgBox(ex.Message)
-                conn.Close()
-            End Try
-        Else
-            MsgBox("Incorrect Info, Try Again")
+        ElseIf Not checkid = "" Then
+            MsgBox("Incorrect Info, Please Try Again")
         End If
         reloadform()
     End Sub
