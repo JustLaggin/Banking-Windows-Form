@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2024 at 09:05 AM
+-- Generation Time: Dec 22, 2024 at 01:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `banking_database`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `historyinfo`
+--
+
+CREATE TABLE `historyinfo` (
+  `id` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `Time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `action` text NOT NULL,
+  `receiver` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `historyinfo`
+--
+
+INSERT INTO `historyinfo` (`id`, `amount`, `Time`, `action`, `receiver`) VALUES
+(11, 100, '2024-12-17 05:56:44', 'Withdraw', '1'),
+(11, -100, '2024-12-17 12:57:42', 'Withdraw', 'Self'),
+(11, 500, '2024-12-17 12:57:49', 'Deposit', 'Self'),
+(11, 500, '2024-12-17 13:03:58', 'Deposit', 'Self'),
+(11, 100, '2024-12-17 13:04:15', 'Withdraw', '5'),
+(11, 0, '2024-12-17 13:05:50', 'Deposit', 'Self'),
+(11, 0, '2024-12-17 13:14:10', 'Withdraw', 'Self'),
+(11, 0, '2024-12-17 13:14:12', 'Deposit', 'Self');
 
 -- --------------------------------------------------------
 
@@ -48,7 +76,8 @@ INSERT INTO `logininfo` (`id`, `username`, `password`) VALUES
 (7, 'lindamartinez', 'helloWorld1'),
 (8, 'davidgarcia', 'userpass555'),
 (9, 'sarahrodriguez', 'strongpass777'),
-(10, 'jamesmartinez', 'ilovebank123');
+(10, 'jamesmartinez', 'ilovebank123'),
+(11, '123', '123');
 
 -- --------------------------------------------------------
 
@@ -70,16 +99,17 @@ CREATE TABLE `userinfo` (
 --
 
 INSERT INTO `userinfo` (`id`, `FirstName`, `LastName`, `Birthday`, `Address`, `Balance`) VALUES
-(1, 'John', 'Smith', '1990-05-15', '123 Maple St, City A', 1250),
+(1, 'John', 'Smith', '1990-05-15', '123 Maple St, City A', 1350),
 (2, 'Jane', 'Doe', '1985-03-22', '456 Oak St, City B', 3426),
 (3, 'Alice', 'Johnson', '1992-07-08', '789 Pine St, City C', 587),
 (4, 'Robert', 'Brown', '1988-11-12', '321 Cedar St, City D', 2450),
-(5, 'Emily', 'Davis', '1995-09-30', '654 Birch St, City E', 1780),
+(5, 'Emily', 'Davis', '1995-09-30', '654 Birch St, City E', 1880),
 (6, 'Michael', 'Wilson', '1993-02-17', '987 Elm St, City F', 3091),
 (7, 'Linda', 'Martinez', '1990-06-25', '123 Spruce St, City G', 675),
 (8, 'David', 'Garcia', '1987-10-03', '456 Chestnut St, City H', 2140),
 (9, 'Sarah', 'Rodriguez', '1991-01-14', '789 Walnut St, City I', 3981),
-(10, 'James', 'Martinez', '1984-12-09', '321 Poplar St, City J', 1296);
+(10, 'James', 'Martinez', '1984-12-09', '321 Poplar St, City J', 1296),
+(11, 'a', 's', '2024-12-07', 'here', 2400);
 
 --
 -- Indexes for dumped tables
@@ -105,7 +135,7 @@ ALTER TABLE `userinfo`
 -- AUTO_INCREMENT for table `logininfo`
 --
 ALTER TABLE `logininfo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `userinfo`
