@@ -45,7 +45,7 @@ Partial Class UserForm
         btn_withdraw.BackgroundImageLayout = ImageLayout.None
         btn_withdraw.Font = New Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btn_withdraw.ForeColor = SystemColors.ButtonFace
-        btn_withdraw.Location = New Point(186, 528)
+        btn_withdraw.Location = New Point(21, 528)
         btn_withdraw.Margin = New Padding(3, 4, 3, 4)
         btn_withdraw.Name = "btn_withdraw"
         btn_withdraw.Size = New Size(155, 60)
@@ -59,7 +59,7 @@ Partial Class UserForm
         btn_deposit.Font = New Font("Arial Rounded MT Bold", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btn_deposit.ForeColor = SystemColors.ButtonFace
         btn_deposit.ImageAlign = ContentAlignment.BottomLeft
-        btn_deposit.Location = New Point(21, 528)
+        btn_deposit.Location = New Point(186, 528)
         btn_deposit.Margin = New Padding(3, 4, 3, 4)
         btn_deposit.Name = "btn_deposit"
         btn_deposit.Size = New Size(155, 60)
@@ -148,7 +148,7 @@ Partial Class UserForm
         ' 
         PictureBox2.BackColor = SystemColors.Control
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(21, 365)
+        PictureBox2.Location = New Point(186, 365)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(155, 156)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -158,7 +158,7 @@ Partial Class UserForm
         ' PictureBox3
         ' 
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(186, 365)
+        PictureBox3.Location = New Point(21, 365)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(155, 156)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
