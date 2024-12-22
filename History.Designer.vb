@@ -29,17 +29,21 @@ Partial Class History
         ' dgv_history
         ' 
         dgv_history.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgv_history.Location = New Point(12, 12)
+        dgv_history.Location = New Point(17, 20)
+        dgv_history.Margin = New Padding(4, 5, 4, 5)
         dgv_history.Name = "dgv_history"
-        dgv_history.Size = New Size(776, 426)
+        dgv_history.RowHeadersWidth = 62
+        dgv_history.Size = New Size(1109, 710)
         dgv_history.TabIndex = 0
         ' 
         ' History
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        BackgroundImage = My.Resources.Resources.Black_Aesthetic_Motivational_Quote_Your_Story__6_
+        ClientSize = New Size(1143, 750)
         Controls.Add(dgv_history)
+        Margin = New Padding(4, 5, 4, 5)
         Name = "History"
         Text = "History"
         CType(dgv_history, ComponentModel.ISupportInitialize).EndInit()

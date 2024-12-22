@@ -31,36 +31,42 @@ Partial Class adminviewform
         ' dgv_customers
         ' 
         dgv_customers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgv_customers.Location = New Point(82, 56)
+        dgv_customers.Location = New Point(222, 175)
+        dgv_customers.Margin = New Padding(4, 5, 4, 5)
         dgv_customers.Name = "dgv_customers"
-        dgv_customers.Size = New Size(461, 269)
+        dgv_customers.RowHeadersWidth = 62
+        dgv_customers.Size = New Size(659, 448)
         dgv_customers.TabIndex = 0
         ' 
         ' btn_delete
         ' 
-        btn_delete.Location = New Point(82, 331)
+        btn_delete.Location = New Point(222, 636)
+        btn_delete.Margin = New Padding(4, 5, 4, 5)
         btn_delete.Name = "btn_delete"
-        btn_delete.Size = New Size(75, 23)
+        btn_delete.Size = New Size(107, 38)
         btn_delete.TabIndex = 1
         btn_delete.Text = "Delete"
         btn_delete.UseVisualStyleBackColor = True
         ' 
         ' txtbox_iddelete
         ' 
-        txtbox_iddelete.Location = New Point(163, 332)
+        txtbox_iddelete.Location = New Point(340, 640)
+        txtbox_iddelete.Margin = New Padding(4, 5, 4, 5)
         txtbox_iddelete.Name = "txtbox_iddelete"
         txtbox_iddelete.PlaceholderText = "Input Id Here"
-        txtbox_iddelete.Size = New Size(380, 23)
+        txtbox_iddelete.Size = New Size(541, 31)
         txtbox_iddelete.TabIndex = 2
         ' 
         ' adminviewform
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        BackgroundImage = My.Resources.Resources.Black_Aesthetic_Motivational_Quote_Your_Story__7_
+        ClientSize = New Size(1143, 750)
         Controls.Add(txtbox_iddelete)
         Controls.Add(btn_delete)
         Controls.Add(dgv_customers)
+        Margin = New Padding(4, 5, 4, 5)
         Name = "adminviewform"
         Text = "adminviewform"
         CType(dgv_customers, ComponentModel.ISupportInitialize).EndInit()
