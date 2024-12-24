@@ -45,7 +45,7 @@ Partial Class UserForm
         btn_withdraw.BackgroundImageLayout = ImageLayout.None
         btn_withdraw.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btn_withdraw.ForeColor = SystemColors.ButtonFace
-        btn_withdraw.Location = New Point(244, 626)
+        btn_withdraw.Location = New Point(589, 647)
         btn_withdraw.Margin = New Padding(4, 5, 4, 5)
         btn_withdraw.Name = "btn_withdraw"
         btn_withdraw.Size = New Size(194, 75)
@@ -59,7 +59,7 @@ Partial Class UserForm
         btn_deposit.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btn_deposit.ForeColor = SystemColors.ButtonFace
         btn_deposit.ImageAlign = ContentAlignment.BottomLeft
-        btn_deposit.Location = New Point(450, 626)
+        btn_deposit.Location = New Point(795, 647)
         btn_deposit.Margin = New Padding(4, 5, 4, 5)
         btn_deposit.Name = "btn_deposit"
         btn_deposit.Size = New Size(194, 75)
@@ -73,7 +73,7 @@ Partial Class UserForm
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ButtonFace
-        Label1.Location = New Point(454, 309)
+        Label1.Location = New Point(799, 330)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(186, 27)
@@ -85,7 +85,7 @@ Partial Class UserForm
         btn_history.BackColor = SystemColors.ActiveCaptionText
         btn_history.Font = New Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btn_history.ForeColor = SystemColors.ButtonFace
-        btn_history.Location = New Point(13, 14)
+        btn_history.Location = New Point(358, 35)
         btn_history.Margin = New Padding(4, 5, 4, 5)
         btn_history.Name = "btn_history"
         btn_history.Size = New Size(146, 38)
@@ -98,7 +98,7 @@ Partial Class UserForm
         btn_transfer.BackColor = SystemColors.ActiveCaptionText
         btn_transfer.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btn_transfer.ForeColor = SystemColors.ButtonFace
-        btn_transfer.Location = New Point(659, 626)
+        btn_transfer.Location = New Point(1004, 647)
         btn_transfer.Margin = New Padding(4, 5, 4, 5)
         btn_transfer.Name = "btn_transfer"
         btn_transfer.Size = New Size(194, 75)
@@ -112,7 +112,7 @@ Partial Class UserForm
         Lbl_AvailBal.BackColor = Color.Transparent
         Lbl_AvailBal.Font = New Font("Times New Roman", 36F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Lbl_AvailBal.ForeColor = SystemColors.Control
-        Lbl_AvailBal.Location = New Point(464, 224)
+        Lbl_AvailBal.Location = New Point(809, 245)
         Lbl_AvailBal.Margin = New Padding(2, 0, 2, 0)
         Lbl_AvailBal.Name = "Lbl_AvailBal"
         Lbl_AvailBal.Size = New Size(179, 81)
@@ -124,7 +124,7 @@ Partial Class UserForm
         btn_logout.BackColor = SystemColors.ActiveCaptionText
         btn_logout.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btn_logout.ForeColor = SystemColors.ButtonFace
-        btn_logout.Location = New Point(929, 930)
+        btn_logout.Location = New Point(1274, 951)
         btn_logout.Margin = New Padding(4, 5, 4, 5)
         btn_logout.Name = "btn_logout"
         btn_logout.Size = New Size(138, 66)
@@ -138,7 +138,7 @@ Partial Class UserForm
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonFace
-        Label2.Location = New Point(420, 245)
+        Label2.Location = New Point(765, 266)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(56, 55)
@@ -149,7 +149,7 @@ Partial Class UserForm
         ' 
         PictureBox2.BackColor = SystemColors.Control
         PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.Location = New Point(450, 422)
+        PictureBox2.Location = New Point(795, 443)
         PictureBox2.Margin = New Padding(4, 4, 4, 4)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(194, 195)
@@ -160,7 +160,7 @@ Partial Class UserForm
         ' PictureBox3
         ' 
         PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.Location = New Point(244, 422)
+        PictureBox3.Location = New Point(589, 443)
         PictureBox3.Margin = New Padding(4, 4, 4, 4)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(194, 195)
@@ -171,7 +171,7 @@ Partial Class UserForm
         ' PictureBox4
         ' 
         PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.Location = New Point(659, 422)
+        PictureBox4.Location = New Point(1004, 443)
         PictureBox4.Margin = New Padding(4, 4, 4, 4)
         PictureBox4.Name = "PictureBox4"
         PictureBox4.Size = New Size(194, 195)
@@ -184,7 +184,7 @@ Partial Class UserForm
         AutoScaleDimensions = New SizeF(10F, 25F)
         AutoScaleMode = AutoScaleMode.Font
         BackgroundImage = My.Resources.Resources.Black_Aesthetic_Motivational_Quote_Your_Story__7_
-        ClientSize = New Size(1080, 1010)
+        ClientSize = New Size(1432, 1010)
         Controls.Add(btn_logout)
         Controls.Add(Lbl_AvailBal)
         Controls.Add(btn_transfer)

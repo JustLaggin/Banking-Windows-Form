@@ -42,7 +42,7 @@ Partial Class NewForm
         ' btn_create
         ' 
         btn_create.Font = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btn_create.Location = New Point(680, 529)
+        btn_create.Location = New Point(854, 524)
         btn_create.Margin = New Padding(4, 5, 4, 5)
         btn_create.Name = "btn_create"
         btn_create.Size = New Size(251, 72)
@@ -52,7 +52,7 @@ Partial Class NewForm
         ' 
         ' txtbox_firstname
         ' 
-        txtbox_firstname.Location = New Point(407, 145)
+        txtbox_firstname.Location = New Point(581, 140)
         txtbox_firstname.Margin = New Padding(4, 5, 4, 5)
         txtbox_firstname.Name = "txtbox_firstname"
         txtbox_firstname.Size = New Size(248, 31)
@@ -60,7 +60,7 @@ Partial Class NewForm
         ' 
         ' txtbox_lastname
         ' 
-        txtbox_lastname.Location = New Point(680, 145)
+        txtbox_lastname.Location = New Point(854, 140)
         txtbox_lastname.Margin = New Padding(4, 5, 4, 5)
         txtbox_lastname.Name = "txtbox_lastname"
         txtbox_lastname.Size = New Size(251, 31)
@@ -68,7 +68,7 @@ Partial Class NewForm
         ' 
         ' txtbox_address
         ' 
-        txtbox_address.Location = New Point(680, 232)
+        txtbox_address.Location = New Point(854, 227)
         txtbox_address.Margin = New Padding(4, 5, 4, 5)
         txtbox_address.Name = "txtbox_address"
         txtbox_address.PlaceholderText = "address"
@@ -80,7 +80,7 @@ Partial Class NewForm
         datepicker_dob.CalendarFont = New Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         datepicker_dob.CustomFormat = "yyyy.MM.dd"
         datepicker_dob.Format = DateTimePickerFormat.Custom
-        datepicker_dob.Location = New Point(404, 230)
+        datepicker_dob.Location = New Point(578, 225)
         datepicker_dob.Margin = New Padding(4, 5, 4, 5)
         datepicker_dob.Name = "datepicker_dob"
         datepicker_dob.Size = New Size(224, 31)
@@ -89,7 +89,7 @@ Partial Class NewForm
         ' 
         ' txtbox_username
         ' 
-        txtbox_username.Location = New Point(404, 314)
+        txtbox_username.Location = New Point(578, 309)
         txtbox_username.Margin = New Padding(4, 5, 4, 5)
         txtbox_username.Name = "txtbox_username"
         txtbox_username.PlaceholderText = "username"
@@ -98,7 +98,7 @@ Partial Class NewForm
         ' 
         ' txtbox_password
         ' 
-        txtbox_password.Location = New Point(404, 382)
+        txtbox_password.Location = New Point(578, 377)
         txtbox_password.Margin = New Padding(4, 5, 4, 5)
         txtbox_password.Name = "txtbox_password"
         txtbox_password.PlaceholderText = "password"
@@ -107,7 +107,7 @@ Partial Class NewForm
         ' 
         ' txtbox_confirmpass
         ' 
-        txtbox_confirmpass.Location = New Point(404, 450)
+        txtbox_confirmpass.Location = New Point(578, 445)
         txtbox_confirmpass.Margin = New Padding(4, 5, 4, 5)
         txtbox_confirmpass.Name = "txtbox_confirmpass"
         txtbox_confirmpass.PlaceholderText = "confirm password"
@@ -120,7 +120,7 @@ Partial Class NewForm
         Label1.BackColor = Color.Transparent
         Label1.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ButtonHighlight
-        Label1.Location = New Point(394, 113)
+        Label1.Location = New Point(568, 108)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
         Label1.Size = New Size(118, 27)
@@ -134,7 +134,7 @@ Partial Class NewForm
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = SystemColors.ButtonHighlight
-        Label2.Location = New Point(669, 113)
+        Label2.Location = New Point(843, 108)
         Label2.Margin = New Padding(2, 0, 2, 0)
         Label2.Name = "Label2"
         Label2.Size = New Size(117, 27)
@@ -148,7 +148,7 @@ Partial Class NewForm
         Label3.BackColor = Color.Transparent
         Label3.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = SystemColors.ButtonHighlight
-        Label3.Location = New Point(394, 198)
+        Label3.Location = New Point(568, 193)
         Label3.Margin = New Padding(2, 0, 2, 0)
         Label3.Name = "Label3"
         Label3.Size = New Size(198, 27)
@@ -162,7 +162,7 @@ Partial Class NewForm
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = SystemColors.ButtonHighlight
-        Label4.Location = New Point(669, 198)
+        Label4.Location = New Point(843, 193)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(148, 27)
@@ -176,7 +176,7 @@ Partial Class NewForm
         Label5.BackColor = Color.Transparent
         Label5.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = SystemColors.ButtonHighlight
-        Label5.Location = New Point(394, 282)
+        Label5.Location = New Point(568, 277)
         Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
         Label5.Size = New Size(195, 27)
@@ -190,7 +190,7 @@ Partial Class NewForm
         Label6.BackColor = Color.Transparent
         Label6.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label6.ForeColor = SystemColors.ButtonHighlight
-        Label6.Location = New Point(394, 350)
+        Label6.Location = New Point(568, 345)
         Label6.Margin = New Padding(2, 0, 2, 0)
         Label6.Name = "Label6"
         Label6.Size = New Size(180, 27)
@@ -204,7 +204,7 @@ Partial Class NewForm
         Label7.BackColor = Color.Transparent
         Label7.Font = New Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label7.ForeColor = SystemColors.ButtonHighlight
-        Label7.Location = New Point(394, 418)
+        Label7.Location = New Point(568, 413)
         Label7.Margin = New Padding(2, 0, 2, 0)
         Label7.Name = "Label7"
         Label7.Size = New Size(190, 27)
